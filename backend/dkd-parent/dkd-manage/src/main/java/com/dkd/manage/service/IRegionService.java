@@ -1,7 +1,11 @@
 package com.dkd.manage.service;
 
 import java.util.List;
+import java.util.ResourceBundle;
+
+import com.dkd.common.core.page.TableDataInfo;
 import com.dkd.manage.domain.Region;
+import com.dkd.manage.domain.vo.RegionVo;
 
 /**
  * 区域管理Service接口
@@ -58,4 +62,13 @@ public interface IRegionService
      * @return 结果
      */
     public int deleteRegionById(Long id);
+
+    /**
+     * 查询区域管理列表
+     * @param region
+     * @return
+     */
+    public List<RegionVo> selectRegionVoList(Region region);
+
+
 }
