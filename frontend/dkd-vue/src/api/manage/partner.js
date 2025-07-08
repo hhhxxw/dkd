@@ -2,6 +2,7 @@ import request from '@/utils/request'
 
 // 查询合作商管理列表
 export function listPartner(query) {
+  console.log('listPartner called with query:', query);
   return request({
     url: '/manage/partner/list',
     method: 'get',
@@ -42,3 +43,11 @@ export function delPartner(id) {
     method: 'delete'
   })
 }
+export function resetPartnerPwd(id) {
+  return request(
+      {
+        url: '/manage/partner/resetPwd' + id,
+        method: "put"
+      }
+  )}
+
